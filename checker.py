@@ -6,7 +6,7 @@ import time
 import threading
 
 from tasksio import TaskPool
-from colorama import init, Fore, Back, Style
+from colorama import init, Fore
 
 init(convert=True)
 
