@@ -68,6 +68,8 @@ async def main():
             async with TaskPool(10_000) as pool:
                 for token in filtered:
                     await pool.put(check(token, client))
+                    
+            await client.shutdown()
 
             print(f"{Fore.WHITE}Tokens Loaded: {TOKENS_LOADED} | Valid: {TOKENS_VALID} | Locked: {TOKENS_LOCKED} | Invalid: {TOKENS_INVALID}")    
             
